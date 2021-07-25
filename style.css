@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+.header {
+  background: url(images/header.jpg) no-repeat center center / cover;
+  border-bottom: 3px solid grey;
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.logo img {
+  width: 50px;
+  border-radius: 10px;
+}
+.btn-header {
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.btn-header button {
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background: #e62107ea;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-header button:hover {
+  transform: translateY(-10%);
+  transition: 0.3s;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-content .title {
+  margin-top: 100px;
+  font-size: 25px;
+}
+.header-content .sub-title {
+  margin-top: 15px;
+  font-size: 20px;
+}
+.header-content .plan-text {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ccc;
+}
+.form {
+  margin-top: 40px;
+  display: flex;
+  margin-bottom: 200px;
+}
+.form label {
+  font-size: 30px;
+}
+.form input {
+  width: 400px;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+}
+.form button {
+  background: red;
+  color: #fff;
+  width: 150px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+/*--Catagorie--*/
+.catagorie {
+  border-bottom: 3px solid grey;
+}
+.catagorie-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 30px;
+}
+
+.catagorie-img {
+  width: 750px;
+  border-radius: 5px;
+}
+.catagorie-img img {
+  width: 100%;
+}
+.catagorie-text {
+  margin-top: 100px;
+  text-align: center;
+}
+.catagorie-text h1 {
+  font-size: 50px;
+}
+.catagorie-text p {
+  font-size: 25px;
+}
+/*FQA*/
+.question {
+  border-bottom: 3px solid grey;
+}
+.question h1 {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 50px;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.faq {
+  background-color: #555;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-title {
+  font-size: 25px;
+  margin: 0 35px 0 0;
+}
+.faq-text {
+  display: none;
+  font-size: 18px;
+  margin: 30px 0 0;
+  animation: toggleopen 1s;
+}
+@keyframes toggleopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.faq.active .faq-text {
+  display: block;
+}
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+
+.new-form h3 {
+  text-align: center;
+  margin-top: 45px;
+}
+.new-form .form {
+  margin-left: 250px;
+}
+
+/*Modal*/
+.from-control {
+  margin: 20px 0;
+}
+.from-control label {
+  display: block;
+  text-transform: uppercase;
+}
+.from-control input {
+  width: 100%;
+  border: 2px #ccc solid;
+  border-radius: 5px;
+  height: 50px;
+  padding: 5px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-box {
+  margin: 10% auto;
+  width: 400px;
+  background: #fff;
+  color: #333;
+  position: relative;
+  animation: modalopen 1s;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-body {
+  padding: 50px;
+}
+.modal-body h3 {
+  font-weight: bold;
+}
+.modal-body .btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.modal .close {
+  cursor: pointer;
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal .modal-footer {
+  background: #f7f7f9;
+  color: #333;
+  padding: 20px 0;
+  border-top: #eee 1px solid;
+  text-align: center;
+}
+.modal .modal-footer {
+  color: steelblue;
+}
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  min-width: 135px;
+  padding: 20px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 14px;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-dark {
+  color: #fff;
+  background: #000;
+}
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 120px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box a {
+  text-decoration: none;
+  color: #555;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .btn-header {
+    margin-left: 200px;
+  }
+  .btn-header button {
+    text-align: center;
+    width: 90px;
+  }
+  .header-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .form {
+    display: block;
+  }
+  .form input {
+    width: 300px;
+  }
+  .form button {
+    margin-top: 40px;
+    height: 50px;
+  }
+  .catagorie-content {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 10px;
+  }
+  .catagorie-text {
+    margin-bottom: 30px;
+  }
+  .catagorie-img {
+    width: 350px;
+  }
+  .new-form .form {
+    margin: 10px 40px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
+    margin: 60px 80px;
+  }
+  .modal .modal-box {
+    width: 350px;
+  }
+  .faq-container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 1100px) {
+  .catagorie-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .catagorie-text {
+    margin-bottom: 30px;
+  }
+  .catagorie-img {
+    width: 550px;
+    margin: 10px auto;
+  }
+}
